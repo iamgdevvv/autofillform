@@ -1,0 +1,13 @@
+* {
+	outline: none;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+body form {
+    width: 600px;
+    max-width: 100%;
+    padding: 40px 20px 20px;
+    margin: 0 auto;
+}
