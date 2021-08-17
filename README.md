@@ -1,4 +1,4 @@
-# Autofillform
+# Autofillform.js
 I cant find autofill form based on url query param after submit form on the same page.
 
 So I decide to make my own library called autofillform.js.
