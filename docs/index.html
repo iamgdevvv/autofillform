@@ -80,6 +80,15 @@
 	</form>
 	<script src="../autofillform.js"></script>
 	<script>
+		/*
+		Version: 0.0.1
+		Author: Grafis Nuresa
+		Website: https://iamgdevvv.github.io/autofillform
+			Docs: https://iamgdevvv.github.io/autofillform
+			Repo: https://github.com/iamgdevvv/autofillform
+		Issues: https://github.com/iamgdevvv/autofillform/issues
+		*/!function(){if("function"==typeof window.CustomEvent)return!1;function CustomEvent(event,params){params=params||{bubbles:!1,cancelable:!1,detail:void 0};var evt=document.createEvent("CustomEvent");return evt.initCustomEvent(event,params.bubbles,params.cancelable,params.detail),evt}CustomEvent.prototype=window.Event.prototype,window.CustomEvent=CustomEvent}();var AutoFillForm={init:function(){var params=this.parseQuery();if(!params||""==params){var EGprevent=new CustomEvent("autofill-cancel",{bubbles:!0,cancelable:!0,composed:!1});return window.dispatchEvent(EGprevent),!1}for(var i=0;i<params.length;i++)for(var query_key=decodeURIComponent(params[i].split("=")[0]),query_value=decodeURIComponent(params[i].split("=").pop()),fields=document.querySelectorAll("[name='"+query_key+"']"),j=0;j<fields.length;j++)fields[j].matches("[type='checkbox']")||fields[j].matches("[type='radio']")?fields[j].matches("[value='"+query_value+"']")&&(fields[j].checked=!0):fields[j].value=query_value;var EGprevent=new CustomEvent("autofill-success",{bubbles:!0,cancelable:!0,composed:!1,detail:{param_query:params}});window.dispatchEvent(EGprevent)},parseQuery:function(){return window.location.search.substring(1).split("&")}};
+		
 		window.addEventListener('autofill-cancel', function (e) {
 			console.log(
 				"Autofill cancel because url query param doesnt found, please submit form using form.submit()");
