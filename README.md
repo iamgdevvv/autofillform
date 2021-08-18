@@ -1,5 +1,5 @@
-# Autofillform
-I cant find autofill form based on url query param after submit form on the same page.
+# Autofillform.js
+I cant find how to autofill form based on url query param after submit form on the same page.
 
 So I decide to make my own library called autofillform.js.
 Lets try and create issue if you find! This extremely lightweight library for autofillform.
