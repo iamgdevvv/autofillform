@@ -17,6 +17,8 @@ window.addEventListener('autofill-cancel', function (e) {
 
 window.addEventListener('autofill-success', function (e) {
   console.log("After autofill form");
+  // Print Param Query
+  console.log(e.detail.param_query);
 });
 
 // And then init autofillform
